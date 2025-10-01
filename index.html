@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SunTimer</title>
+    <link rel="stylesheet" href="styling/sunset-sunrise.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="sunset-sunrise.js"></script>
+  </head>
+  <body>
+    <h1>Current Time</h1>
+    <p class="time">The current time will appear here!</p>
+    <div class="container">
+      <h1>Sunrise & Sunset Times</h1>
+
+      <div class="input-group">
+        <label for="latitude">Latitude:</label>
+        <input
+          class="line-input"
+          type="number"
+          id="latitude"
+          placeholder="e.g., 50.8225"
+          value="50.8225"
+        />
+      </div>
+      <div class="input-group">
+        <label for="longitude">Longitude:</label>
+        <input
+          class="line-input"
+          type="number"
+          id="longitude"
+          placeholder="e.g., -0.1372"
+          value="-0.1372"
+        />
+      </div>
+      <div class="input-group">
+        <label for="Time">Time:</label>
+        <input class="line-input" type="time" id="time" />
+        <p>(Will use current time if blank)</p>
+      </div>
+      <button class="getSunTimes">Get Sun Times</button>
+      <div class="results">
+        <div class="sun-times">
+          <p>Sunrise time is:</p>
+          <p class="sunrise"></p>
+          <p>Sunset time is:</p>
+          <p class="sunset"></p>
+        </div>
+        <div class="countdown-timer">
+          <div class="till-sunset">
+            <p>Time until sunset:</p>
+          </div>
+          <div class="till-sunrise">
+            <p>Time until sunrise:</p>
+          </div>
+          <p class="countdown">countdown</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Background art by Daeara</p>
+    </footer>
+  </body>
+</html>
