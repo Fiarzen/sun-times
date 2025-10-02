@@ -123,7 +123,7 @@ function updateCountdown(countDownDate, now) {
   // If the countdown isn't over, run again a second later
   if (differenceInSeconds > 0) {
     setTimeout(() => {
-      const nextTime = new Date(now.getTime() + 1000);
+      const nextTime = new Date(now.getTime + 1000);
       updateCountdown(countDownDate, nextTime);
     }, 1000);
   }
