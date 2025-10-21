@@ -33,11 +33,8 @@ async function displaySunTimes() {
   sunsetTime = timeStringToDate(data.sunset);
   const timeElement = document.getElementById("time");
   let now;
-  if (!timeElement.value) {
-    now = new Date().getTime();
-  } else {
-    now = timeStringToDate(timeElement.value);
-  }
+
+  now = new Date();
 
   sunriseTime = timeStringToDate(data.sunrise);
   console.log(sunriseTime, now, sunsetTime);
@@ -123,8 +120,7 @@ function updateCountdown(countDownDate, now) {
   // If the countdown isn't over, run again a second later
   if (differenceInSeconds > 0) {
     setTimeout(() => {
-      const nextTime = new Date(now.getTime + 1000);
-      updateCountdown(countDownDate, nextTime);
+      updateCountdown(countDownDate, new Date());
     }, 1000);
   }
 }
